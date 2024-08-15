@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .header-container {
   display: flex;
   height: 120px;
@@ -69,4 +70,90 @@
   margin-left:5px;
   margin-top:3px;
   border-radius:8px;
+=======
+.header-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    width:100%;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3);
+    margin-bottom:15px;
+}
+
+.logo-Image{
+    width:120px;
+    height:120px;
+    margin-top:0px;
+    
+}
+
+.nav-icon{
+    width:25px;
+    height:25px;
+    margin-top:10px;
+    margin-right:5px;
+}
+.nav-icon-offer{
+    width:45px;
+    height:45px;
+}
+
+
+
+.nav-items{
+    margin-right:5px;
+   margin-top:22px;
+   display:flex;
+}
+.body{
+    
+
+}
+
+.restro-card{
+    width:210px;
+    padding:5px;
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.3);
+    margin-top:10px;
+    margin-right:10px;
+    
+}
+.restro-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    
+    
+}
+.restro-card:hover{
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 4px rgba(0, 0, 0, 0.5);
+    
+}
+.search{
+    padding-top:15px;
+
+}
+
+.restro-image{
+    width:100%;
+    height:170px;
+    
+}
+
+.Shimmer-container{
+    display:flex;
+    flex-wrap:wrap;
+}
+.shimmer-cards{
+    width:210px;
+    height:350px;
+    margin:20px;
+    background-color:rgb(244, 244, 238);
+}
+
+.login-button{
+    width:40px;
+    height:30px;
+>>>>>>> a6e5c79 (Implement shimmer effect and conditional rendering; add useState and useEffect hooks)
 }

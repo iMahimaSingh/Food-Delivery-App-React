@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState,useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -2088,3 +2089,33 @@ function App() {
 }
 
 export default App
+=======
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Header from "./components/Header";
+import BodyPart from "./components/BodyPart";
+
+import "./App.css";
+
+
+
+
+
+
+
+
+
+
+const AppLayout = ()=>{
+    return(
+        <div className="app">
+            <Header/>
+            <BodyPart/>
+
+        </div>
+    )
+}
+
+const root = ReactDOM. createRoot(document.getElementById("root"));
+root.render(<AppLayout/>);
+>>>>>>> a6e5c79 (Implement shimmer effect and conditional rendering; add useState and useEffect hooks)
