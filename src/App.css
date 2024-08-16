@@ -1,15 +1,13 @@
-<<<<<<< HEAD
+
 .header-container {
   display: flex;
   height: 120px;
-  border-top: 2px solid #f2f4f4 ; /* Border at the top */
+  border-top: 2px solid #f2f4f4 ; 
   box-shadow: 0 -4px 6px -2px #f2f4f4 ; 
   width: 100vw; 
   align-items: center; 
 }
-/* .header-container:hover{
-  border: 1px solid #e67e22 ;
-} */
+
 
 .image-container {
   margin-right: 20px; 
@@ -27,10 +25,20 @@
   flex-grow: 1;
   justify-content: space-around; 
 }
+.nav-icon{
+  height:27px;
+}
 
 .nav-items {
   display: flex;
   align-items: center; 
+}
+.nav-icon-about-us{
+  height:27px;
+}
+.icon-text{
+  padding-top:7px;
+  padding-left:5px;
 }
 
 .logo-image {
@@ -51,8 +59,7 @@
   flex-wrap:wrap;
   margin-bottom:8px;
   
-  
-}
+  }
 
 .card-text{
   padding-left:10px;
@@ -70,7 +77,7 @@
   margin-left:5px;
   margin-top:3px;
   border-radius:8px;
-=======
+}
 .header-container{
     display:flex;
     flex-wrap:wrap;
@@ -98,26 +105,22 @@
     height:45px;
 }
 
-
-
 .nav-items{
     margin-right:5px;
    margin-top:22px;
    display:flex;
 }
-.body{
-    
-
-}
 
 .restro-card{
+
     width:210px;
     padding:5px;
     box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.3);
     margin-top:10px;
     margin-right:10px;
-    
 }
+    
+
 .restro-container{
     display:flex;
     flex-direction: row;
@@ -152,7 +155,27 @@
     background-color:rgb(244, 244, 238);
 }
 
-.login-button{
+.login button{
     width:40px;
     height:30px;
+    margin-top:20px;
+    padding-top:20px;
+    margin-left:5px;
 }
+.nav-icon-login{
+  height:28px;
+}
+
+.filter{
+  display:flex;
+  
+  
+}
+.filter-btn{
+  height:22px;
+  margin-left:8px;
+  
+}
+
+  
+

@@ -1,0 +1,24 @@
+.about-section{
+    background-color:rgb(250, 247, 244);
+    height:100vh;
+    
+}
+.about-section h1{
+    padding:18px;
+    color:rgb(239, 135, 135)
+
+}
+.about-section p{
+    padding-left:20px;
+    padding-right:10px;
+    color:rgb(226, 149, 48)
+}
+.about-section strong{
+   color:rgb(239, 153, 41)
+}
+.help-section{
+    background-color:rgb(239, 232, 225);
+    height:100vh;
+    padding-left:10px;
+    padding-right:10px;
+}

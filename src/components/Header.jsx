@@ -1,5 +1,6 @@
-import { LOGO_URL,OFFER_ICON,HELP_ICON ,LOGIN_ICON,CART_ICON} from "../utils/constant";
+import { LOGO_URL,HOME_ICON,HELP_ICON ,LOGIN_ICON,CART_ICON,ABOUT_ICON} from "../utils/constant";
 import {useState} from "react";
+import { Link } from "react-router-dom";
 
 
 const Header = () =>{
@@ -14,24 +15,32 @@ const Header = () =>{
                     className="logo-Image"
                     src={LOGO_URL}/>
             </div>
+            
             <div className="nav-items">
                 <img 
                 className="nav-icon"
                 alt="nav-icon"
-                src={OFFER_ICON}/>
-                 <p className="icon-text">Offers</p>
+                src={HOME_ICON}/>
+                 <p className="icon-text"><Link to="/">Home</Link></p>
+            </div>
+            <div className="nav-items">
+                <img 
+                className="nav-icon-about-us"
+                alt="nav-icon"
+                src={ABOUT_ICON}/>
+                 <p className="icon-text"><Link to="/about">About Us</Link></p>
             </div>
             <div className="nav-items">
                 <img 
                 className="nav-icon"
                 alt="nav-icon"
                 src={HELP_ICON}/>
-                 <p className="icon-text">Help</p>
+                 <p className="icon-text"><Link to="/help">Help</Link></p>
             </div>
               
             <div className="nav-items">
                 <img 
-                className="nav-icon"
+                className="nav-icon-login"
                 alt="nav-icon"
                 src={LOGIN_ICON}/>
                <button
