@@ -15,3 +15,5 @@ export const OFFER_ICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACUC
  export const ABOUT_ICON="https://cdn-icons-png.flaticon.com/128/476/476863.png";
  
  export const HOME_ICON="https://cdn-icons-png.flaticon.com/128/1946/1946488.png";
+ 
+ export const API_MENU="https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=";

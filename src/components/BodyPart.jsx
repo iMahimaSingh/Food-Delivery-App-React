@@ -1,6 +1,9 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
+
+import useOnlineStatus from '../utils/useOnlineStatus';
 
 
 const BodyPart = () =>{
@@ -19,8 +22,12 @@ const BodyPart = () =>{
         const json=await data.json();
         console.log(json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
         
-        setListOfRestaurants(json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestaurant(json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
+        setListOfRestaurants(json?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestaurant(json?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
+
+       const  onlineStatus=useOnlineStatus();
+       if(onlineStatus===false)
+        return(<h1>Looks like you are Offline!!Please check your internet connection.</h1>);
         
     };
     return listOfRestaurants.length==0?
@@ -45,7 +52,7 @@ const BodyPart = () =>{
             </div>
             <div className="restro-container">
                  {
-                  filteredRestaurant.map((restaurant)=>(<RestaurantCard key={restaurant.info.id}resData={restaurant}/>))
+                  filteredRestaurant.map((restaurant)=>(<Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}><RestaurantCard resData={restaurant}/></Link>))
                  }
                   
             </div>

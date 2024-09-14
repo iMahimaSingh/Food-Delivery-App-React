@@ -1,10 +1,12 @@
 import { LOGO_URL,HOME_ICON,HELP_ICON ,LOGIN_ICON,CART_ICON,ABOUT_ICON} from "../utils/constant";
 import {useState} from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 
 const Header = () =>{
     const  [btnNameReact,setBtnNameReact]=useState("Login");
+    const onlineStatus=useOnlineStatus();
     const handleLoginClick = () => {
         setBtnNameReact(prevState => (prevState === "Login" ? "Logout" : "Login"));
     };
@@ -14,6 +16,9 @@ const Header = () =>{
                 <img alt="logo-image" 
                     className="logo-Image"
                     src={LOGO_URL}/>
+            </div>
+            <div className="nav-items">
+                <p className="icon-text">Online Status:{onlineStatus?"✅":"🔴"}</p>
             </div>
             
             <div className="nav-items">
