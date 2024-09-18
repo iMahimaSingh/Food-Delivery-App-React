@@ -11,58 +11,41 @@ const Header = () =>{
         setBtnNameReact(prevState => (prevState === "Login" ? "Logout" : "Login"));
     };
     return(
-        <div className="header-container">
-            <div className="logo">
-                <img alt="logo-image" 
-                    className="logo-Image"
-                    src={LOGO_URL}/>
-            </div>
-            <div className="nav-items">
-                <p className="icon-text">Online Status:{onlineStatus?"✅":"🔴"}</p>
-            </div>
-            
-            <div className="nav-items">
-                <img 
-                className="nav-icon"
-                alt="nav-icon"
-                src={HOME_ICON}/>
-                 <p className="icon-text"><Link to="/">Home</Link></p>
-            </div>
-            <div className="nav-items">
-                <img 
-                className="nav-icon-about-us"
-                alt="nav-icon"
-                src={ABOUT_ICON}/>
-                 <p className="icon-text"><Link to="/about">About Us</Link></p>
-            </div>
-            <div className="nav-items">
-                <img 
-                className="nav-icon"
-                alt="nav-icon"
-                src={HELP_ICON}/>
-                 <p className="icon-text"><Link to="/help">Help</Link></p>
-            </div>
-              
-            <div className="nav-items">
-                <img 
-                className="nav-icon-login"
-                alt="nav-icon"
-                src={LOGIN_ICON}/>
-               <button
-                    className="login button"
-                    onClick={handleLoginClick} 
-                >
-                    {btnNameReact} 
-                </button>
-        </div>
-        <div className="nav-items">
-                <img 
-                className="nav-icon"
-                alt="nav-icon"
-                src={CART_ICON}/>
-                <p className="icon-text">Cart</p>
-               </div> 
-        </div>
+        <div className="flex justify-between items-center p-4 bg-gray-100 shadow-lg">
+  <div className="logo">
+    <img alt="logo-image" className="w-40" src={LOGO_URL} />
+  </div>
+  <div className="flex space-x-3 items-center">
+    <p className="text-sm">Online Status: {onlineStatus ? "✅" : "🔴"}</p>
+
+    <div className="flex items-center space-x-2">
+      <img className="w-5 h-5" alt="nav-icon" src={HOME_ICON} />
+      <Link to="/" className="text-sm">Home</Link>
+    </div>
+
+    <div className="flex items-center space-x-2">
+      <img className="w-5 h-5" alt="nav-icon" src={ABOUT_ICON} />
+      <Link to="/about" className="text-sm">About Us</Link>
+    </div>
+
+    <div className="flex items-center space-x-2">
+      <img className="w-5 h-5" alt="nav-icon" src={HELP_ICON} />
+      <Link to="/help" className="text-sm">Help</Link>
+    </div>
+
+    <div className="flex items-center space-x-2">
+      <img className="w-5 h-5" alt="nav-icon" src={LOGIN_ICON} />
+      <button onClick={handleLoginClick} className="text-sm">{btnNameReact}</button>
+    </div>
+
+    <div className="flex items-center space-x-2">
+      <img className="w-5 h-5" alt="nav-icon" src={CART_ICON} />
+      <p className="text-sm">Cart</p>
+    </div>
+  </div>
+</div>
+
+    
     );
 };
 
